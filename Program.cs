@@ -9,14 +9,16 @@ namespace WCTC_Battle
         static void Main(string[] args)
         {
             Enemy enemy = new Enemy();
-            enemy.Name = "Angry Ant";
+            enemy.Name = "Pikachu";
             enemy.Leather.Defense = 5;
-            enemy.Sword.Power = 5;
+            enemy.Gun.Power = 5;
+            enemy.Gun.Size="BIG!";
 
             // DEPENDENCY INJECTION
             var serviceProvider = new ServiceCollection()
                 .AddSingleton<IArmor, Leather>()
                 .AddSingleton<IWeapon, Sword>()
+                .AddSingleton<IWeapon, Gun>()
                 .AddSingleton<ICombatant, Fighter>()
                 .BuildServiceProvider();
 

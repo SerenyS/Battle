@@ -16,13 +16,14 @@ namespace WCTC_Battle.Models
         {
             _armor = armor;
             _weapon = weapon;
-            Name = "Fighter Fred";
+            weapon.Size ="BIG";
+            Name = "Mark!!";
         }
         public void Attack(Enemy enemy)
         {
-            if (_weapon.Power > enemy.Leather.Defense)
+            if (_weapon.Power < enemy.Leather.Defense)
             {
-                Console.WriteLine($"{this.Name} attacks {enemy.Name} with a {_weapon.Name}");
+                Console.WriteLine($"{this.Name} attacks {enemy.Name} with a {_weapon.Size} {_weapon.Name}");
             }
             else
             {

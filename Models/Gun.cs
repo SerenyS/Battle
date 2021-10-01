@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace WCTC_Battle.Models
 {
-    public class Sword : IWeapon
+    public class Gun : IWeapon
     {
-        public Sword()
+        public Gun()
         {
-            Name = "Sword";
+            Name = "Gun";
         }
 
         public string Name { get; set; }
